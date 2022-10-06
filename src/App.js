@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavBar, List } from './components'
 
 const App = () => {
   return (
