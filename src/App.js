@@ -1,10 +1,19 @@
-import React from 'react'
-import { NavBar, List } from './components'
+import React from 'react';
+import { NavBar, List } from './components';
+import { Header, Footer } from './containers'
 
 const App = () => {
   return (
     <div>
-        <h1>App hackathon</h1>
+        <div className="bg">
+          <NavBar/>
+          <Header/>
+        </div>
+        <div>
+          <List/>
+          <Footer/>
+        </div>
+
     </div>
   )
 }
