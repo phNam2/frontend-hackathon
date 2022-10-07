@@ -1,6 +1,7 @@
 import React from 'react';
+import './App.css';
 import { NavBar, List } from './components';
-import { Header, Footer } from './containers'
+import { Header, Footer } from './containers';
 
 const App = () => {
   return (
