@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
 import './index.css';
-import { NavBar, List } from './components';
+import { NavBar} from './components';
 import { Header, Footer } from './containers';
+import { AdvocateList } from './pages';
 
 const App = () => {
   return (
@@ -12,7 +13,7 @@ const App = () => {
           <Header/>
         </div>
         <div>
-          <List/>
+          <AdvocateList/>
           <Footer/>
         </div>
 
