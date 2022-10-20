@@ -21,7 +21,7 @@ const App = () => {
         </div>
         <Routes>
           <Route path="/advocates" element={<AdvocateList />} />
-          {/* <Route path="rider/:id" element={<RiderPage />}/> */}
+          {/* <Route path="advocates/:id" element={<RiderPage />}/> */}
         </Routes>
         <div>
           <Footer/>
@@ -29,18 +29,6 @@ const App = () => {
         
       </div>
     </Router>
-
-    // <div>
-    //     <div className="bg">
-    //       <NavBar/>
-    //       <Header/>
-    //     </div>
-    //     <div>
-    //       <AdvocateList/>
-    //       
-    //     </div>
-
-    // </div>
   )
 }
 

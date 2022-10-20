@@ -10,12 +10,20 @@ const AdvocatesList = () => {
     let getAdvocates = async() => {
         let response = await fetch('https://cados.up.railway.app/advocates/')
         let data = await response.json()
-        console.log('Data:', data)
-        setAdvocates(data)
+        console.log('Data:', data.advocates)
+        setAdvocates(data.advocates)
     }
 
     return (
-        <div>AdvocatesList</div>
+        <div>
+            <div>AdvocatesList:</div>
+            <div className="advocates-list">
+                {advocates.map((advocate, i) =>(
+                    <h3 key={i}>{advocate.name}</h3>
+                ))}
+            </div>
+        </div>
+        
 
         
     )
