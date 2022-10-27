@@ -18,10 +18,9 @@ const App = () => {
         <div className="bg">
           <NavBar/>
           <Header/>
-          <ListItem/>
         </div>
         <Routes>
-          <Route path="/advocates" element={<AdvocateList />} />
+          <Route path="/advocates" element={<AdvocateList /> } />
           {/* <Route path="advocates/:id" element={<RiderPage />}/> */}
         </Routes>
         <div>
