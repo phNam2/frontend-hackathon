@@ -7,7 +7,7 @@ import {
 import React from 'react';
 import './App.css';
 import './index.css';
-import { NavBar} from './components';
+import { NavBar, ListItem} from './components';
 import { Header, Footer } from './containers';
 import { AdvocateList } from './pages';
 
@@ -18,6 +18,7 @@ const App = () => {
         <div className="bg">
           <NavBar/>
           <Header/>
+          <ListItem/>
         </div>
         <Routes>
           <Route path="/advocates" element={<AdvocateList />} />
