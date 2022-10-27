@@ -19,7 +19,7 @@ const AdvocatesList = () => {
         setPagesNumber(data.pagination.pages) // Get the current pagination information from API
     }
 
-
+    // The button lead to the API page after clicked
     const goToPage = (event) => {
         getAdvocates(Number(event.target.id))
     }
