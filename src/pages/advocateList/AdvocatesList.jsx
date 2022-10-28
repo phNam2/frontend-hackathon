@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import ListItem from '../../components/listItem/ListItem'
+import { ListItem} from '../../components';
 import './AdvocateList.css'
 
 const AdvocatesList = () => {
@@ -33,11 +33,18 @@ const AdvocatesList = () => {
             {/* Pages number showcase */}
             <ul className="pages-number">
                 {pages.map((page, i) =>(
-                    <li key={i} id={page} class="pages-button" onClick={goToPage}>{page}</li>
+                    <li key={i} 
+                        id={page} 
+                        class="pages-button" 
+                        onClick={goToPage}
+                    >
+                        {page}
+                    </li>
                 ))}
             </ul>
             
             <h3>{pagesInfo.current_page}</h3>
+            
         </div>      
     )
 }

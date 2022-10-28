@@ -7,7 +7,7 @@ import {
 import React from 'react';
 import './App.css';
 import './index.css';
-import { NavBar, ListItem} from './components';
+import { NavBar } from './components';
 import { Header, Footer } from './containers';
 import { AdvocateList } from './pages';
 
