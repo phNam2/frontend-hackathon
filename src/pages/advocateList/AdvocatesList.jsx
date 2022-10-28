@@ -36,7 +36,11 @@ const AdvocatesList = () => {
     }
 
     const goToFirstPage = () => {
+        getAdvocates(1)
+    }
 
+    const goToLastPage = () => {
+        getAdvocates(pagesInfo.total_pages)
     }
 
     return (
@@ -64,7 +68,7 @@ const AdvocatesList = () => {
                 <li>
                     <button>Next</button>
                 </li>
-                <li>
+                <li onClick={goToLastPage}>
                     <button>Last</button>
                 </li>
             </ul>
