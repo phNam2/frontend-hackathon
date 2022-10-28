@@ -1,14 +1,20 @@
 import React, { useState, useEffect } from 'react'
+import {useLocation} from "react-router-dom";
 import { ListItem} from '../../components';
 import './AdvocateList.css'
 
 const AdvocatesList = () => {
 
+    let [queryString, setString] = useState([])
     let [advocates, setAdvocates] = useState([])
     let [pages, setPagesNumber] = useState([])
     let [pagesInfo, setPagesInfo] = useState([])
+
+    // Search the page location in the URL
+    const search = useLocation().search
+    const pageURL = new URLSearchParams(search).get('page')
     useEffect(() => {
-        getAdvocates(50)
+        getAdvocates(pageURL)
     }, [])
 
     let getAdvocates = async(current_page) => {
@@ -35,7 +41,7 @@ const AdvocatesList = () => {
                 {pages.map((page, i) =>(
                     <li key={i} 
                         id={page} 
-                        className={pagesInfo.current_page == page ? "active": null}
+                        class={pagesInfo.current_page == page ? "active": null}
                         onClick={goToPage}
                     >
                         {page}
