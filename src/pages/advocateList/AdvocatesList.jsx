@@ -35,20 +35,24 @@ const AdvocatesList = () => {
         getAdvocates(Number(event.target.id))
     }
 
+    // The function go to the first page
     const goToFirstPage = () => {
         getAdvocates(1)
     }
 
+    // The function go to the last page
     const goToLastPage = () => {
         getAdvocates(pagesInfo.total_pages)
     }
 
+    // The function go to the previous page
     const goToPrevPage = () => {
         if (pagesInfo.has_previous) {
             getAdvocates(pagesInfo.current_page-1)
         }
     }
 
+    // The function go to the next page
     const goToNextPage = () => {
         if (pagesInfo.has_next) {
             getAdvocates(pagesInfo.current_page+1)
@@ -60,7 +64,7 @@ const AdvocatesList = () => {
             {/* Advocate information */}
             <ListItem advocates={advocates} />
 
-            {/* Pages number showcase */}
+            {/* Pages number button section */}
             <ul className="pages-number">
                 <li>
                     <button onClick={goToFirstPage}>First</button>
