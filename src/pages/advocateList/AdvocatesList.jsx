@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import ListItem from '../../components/listItem/ListItem'
 import './AdvocateList.css'
 
 const AdvocatesList = () => {
@@ -13,7 +14,7 @@ const AdvocatesList = () => {
     let getAdvocates = async(current_page) => {
         let response = await fetch('https://cados.up.railway.app/advocates/?page='+ current_page)
         let data = await response.json()
-        console.log(data.pagination.pages)
+        // console.log(data.pagination.pages)
         setAdvocates(data.advocates) // Get the advocates information from API
         setPagesInfo(data.pagination)
         setPagesNumber(data.pagination.pages) // Get the current pagination information from API
@@ -26,13 +27,8 @@ const AdvocatesList = () => {
 
     return (
         <div>
-            <div>AdvocatesList:</div>
             {/* Advocate information */}
-            <div className="advocates-list">
-                {advocates.map((advocate, i) =>(
-                    <h3 key={i}>{advocate.name}</h3>
-                ))}
-            </div>
+            <ListItem advocates={advocates} />
 
             {/* Pages number showcase */}
             <ul className="pages-number">
