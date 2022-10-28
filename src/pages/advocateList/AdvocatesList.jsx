@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import {useLocation} from "react-router-dom";
-import { ListItem} from '../../components';
+import { ListItem } from '../../components';
 import './AdvocateList.css'
 
 const AdvocatesList = () => {
 
-    let [queryString, setString] = useState([])
     let [advocates, setAdvocates] = useState([])
     let [pages, setPagesNumber] = useState([])
     let [pagesInfo, setPagesInfo] = useState([])
