@@ -27,12 +27,16 @@ const AdvocatesList = () => {
         setAdvocates(data.advocates) // Get the advocates information from API
         setPagesInfo(data.pagination)
         setPagesNumber(data.pagination.pages) // Get the current pagination information from API
+        window.history.replaceState(null, "", "/advocates/?page=" + current_page)
     }
 
     // The button lead to the API page after clicked
     const goToPage = (event) => {
         getAdvocates(Number(event.target.id))
-        window.history.replaceState(null, "", "/advocates/?page=" + Number(event.target.id))
+    }
+
+    const goToFirstPage = () => {
+
     }
 
     return (
@@ -42,6 +46,12 @@ const AdvocatesList = () => {
 
             {/* Pages number showcase */}
             <ul className="pages-number">
+                <li>
+                    <button onClick={goToFirstPage}>First</button>
+                </li>
+                <li>
+                    <button>Prev</button>
+                </li>
                 {pages.map((page, i) =>(
                     <li key={i} 
                         id={page} 
@@ -51,6 +61,12 @@ const AdvocatesList = () => {
                         {page}
                     </li>
                 ))}
+                <li>
+                    <button>Next</button>
+                </li>
+                <li>
+                    <button>Last</button>
+                </li>
             </ul>
             
             <h3>{pagesInfo.current_page}</h3>
