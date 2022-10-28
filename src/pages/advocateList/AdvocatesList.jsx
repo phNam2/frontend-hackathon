@@ -32,6 +32,7 @@ const AdvocatesList = () => {
     // The button lead to the API page after clicked
     const goToPage = (event) => {
         getAdvocates(Number(event.target.id))
+        window.history.replaceState(null, "", "/advocates/?page=" + Number(event.target.id))
     }
 
     return (
