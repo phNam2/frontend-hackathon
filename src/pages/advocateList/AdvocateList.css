@@ -17,3 +17,7 @@
     color: white;
     background-color: black;
 }
+
+.pages-number li.work {
+    visibility: hidden;
+}

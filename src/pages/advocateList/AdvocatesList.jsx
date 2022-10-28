@@ -66,10 +66,10 @@ const AdvocatesList = () => {
 
             {/* Pages number button section */}
             <ul className="pages-number">
-                <li>
+                <li class={pagesInfo.current_page == 1 ? "work": null}>
                     <button onClick={goToFirstPage}>First</button>
                 </li>
-                <li>
+                <li class={pagesInfo.current_page == 1 ? "work": null}>
                     <button onClick={goToPrevPage}>Prev</button>
                 </li>
                 {pages.map((page, i) =>(
@@ -81,11 +81,11 @@ const AdvocatesList = () => {
                         {page}
                     </li>
                 ))}
-                <li>
+                <li class={pagesInfo.current_page == pagesInfo.total_pages ? "work": null}>
                     <button onClick={goToNextPage}>Next</button>
                 </li>
-                <li onClick={goToLastPage}>
-                    <button>Last</button>
+                <li class={pagesInfo.current_page == pagesInfo.total_pages ? "work": null}>
+                    <button onClick={goToLastPage}>Last</button>
                 </li>
             </ul>
             
