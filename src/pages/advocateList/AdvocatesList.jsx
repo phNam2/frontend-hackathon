@@ -27,7 +27,7 @@ const AdvocatesList = () => {
         setAdvocates(data.advocates) // Get the advocates information from API
         setPagesInfo(data.pagination)
         setPagesNumber(data.pagination.pages) // Get the current pagination information from API
-        window.history.replaceState(null, "", "/advocates/?page=" + current_page)
+        window.history.replaceState(null, "", "/advocates/?page=" + current_page) // Fix the URL for history search
     }
 
     // The button lead to the API page after clicked
