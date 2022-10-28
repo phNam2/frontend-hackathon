@@ -43,6 +43,18 @@ const AdvocatesList = () => {
         getAdvocates(pagesInfo.total_pages)
     }
 
+    const goToPrevPage = () => {
+        if (pagesInfo.has_previous) {
+            getAdvocates(pagesInfo.current_page-1)
+        }
+    }
+
+    const goToNextPage = () => {
+        if (pagesInfo.has_next) {
+            getAdvocates(pagesInfo.current_page+1)
+        }
+    }
+
     return (
         <div>
             {/* Advocate information */}
@@ -54,7 +66,7 @@ const AdvocatesList = () => {
                     <button onClick={goToFirstPage}>First</button>
                 </li>
                 <li>
-                    <button>Prev</button>
+                    <button onClick={goToPrevPage}>Prev</button>
                 </li>
                 {pages.map((page, i) =>(
                     <li key={i} 
@@ -66,7 +78,7 @@ const AdvocatesList = () => {
                     </li>
                 ))}
                 <li>
-                    <button>Next</button>
+                    <button onClick={goToNextPage}>Next</button>
                 </li>
                 <li onClick={goToLastPage}>
                     <button>Last</button>
