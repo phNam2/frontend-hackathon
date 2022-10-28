@@ -35,7 +35,7 @@ const AdvocatesList = () => {
                 {pages.map((page, i) =>(
                     <li key={i} 
                         id={page} 
-                        class="pages-button" 
+                        className={pagesInfo.current_page == page ? "active": null}
                         onClick={goToPage}
                     >
                         {page}
