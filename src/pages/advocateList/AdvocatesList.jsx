@@ -13,7 +13,11 @@ const AdvocatesList = () => {
     const search = useLocation().search
     const pageURL = new URLSearchParams(search).get('page')
     useEffect(() => {
-        getAdvocates(pageURL)
+        if (pageURL == null) {
+            getAdvocates(1)
+        } else {
+            getAdvocates(pageURL)
+        }
     }, [])
 
     let getAdvocates = async(current_page) => {
