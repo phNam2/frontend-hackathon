@@ -13,9 +13,19 @@
     background-color: rgb(222, 202, 176);
 }
 
+.pages-number li li {
+    display: none;
+}
+
 .pages-number li.active {
     color: white;
     background-color: black;
+}
+
+.pages-number li.active li {
+    background-color: aqua;
+    color: black;
+    display: block;
 }
 
 .pages-number li.work {
