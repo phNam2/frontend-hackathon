@@ -33,6 +33,13 @@ const AdvocatesList = () => {
     // The button lead to the API page after clicked
     const goToPage = (event) => {
         getAdvocates(Number(event.target.id))
+        // console.log(event.target.id)
+    }
+
+    const goToPage2 = (event) => {
+        let arr = event.target.id.split(" ");
+        getAdvocates(Number(arr[1]))
+        // console.log(arr[1])
     }
 
     // The function go to the first page
@@ -61,10 +68,12 @@ const AdvocatesList = () => {
 
     const allPageNumber = [];
     for (let i=1; i<= pagesInfo.total_pages; i++) {
-        allPageNumber.push(<li  key={i}
+        allPageNumber.push(<div key={"drop"+i} 
+                               onClick={goToPage2} 
+                               id={"drop "+i}
                             >
                                 {i}
-                            </li>);
+                            </div>);
     }
 
     return (
@@ -74,29 +83,30 @@ const AdvocatesList = () => {
 
             {/* Pages number button section */}
             <ul className="pages-number">
-                <li class={pagesInfo.current_page === 1 ? "work": null}>
+                <li key="first" className={pagesInfo.current_page === 1 ? "work": null}>
                     <button onClick={goToFirstPage}>First</button>
                 </li>
-                <li class={pagesInfo.current_page === 1 ? "work": null}>
+                <li key="prev"className={pagesInfo.current_page === 1 ? "work": null}>
                     <button onClick={goToPrevPage}>Prev</button>
                 </li>
                 {pages.map((page, i) =>(
                     <div>
                         <li key={i} 
                             id={page} 
-                            class={pagesInfo.current_page === page ? "active": null}
+                            className={pagesInfo.current_page === page ? "active": null}
                             onClick={goToPage}
                         >
                             {page}
                             {allPageNumber}
+                            
                         </li>
 
                     </div>
                 ))}
-                <li class={pagesInfo.current_page === pagesInfo.total_pages ? "work": null}>
+                <li key="next" className={pagesInfo.current_page === pagesInfo.total_pages ? "work": null}>
                     <button onClick={goToNextPage}>Next</button>
                 </li>
-                <li class={pagesInfo.current_page === pagesInfo.total_pages ? "work": null}>
+                <li key="last" className={pagesInfo.current_page === pagesInfo.total_pages ? "work": null}>
                     <button onClick={goToLastPage}>Last</button>
                 </li>
             </ul>
