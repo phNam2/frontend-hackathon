@@ -8,6 +8,7 @@ const AdvocatesList = () => {
     let [advocates, setAdvocates] = useState([])
     let [pages, setPagesNumber] = useState([])
     let [pagesInfo, setPagesInfo] = useState([])
+    let [select, setSelect] = useState([null])
 
     // Search the page location in the URL
     let search = useLocation().search
@@ -78,20 +79,27 @@ const AdvocatesList = () => {
     }
 
 
+    const toggle = (i) => {
+        if (select === i) {
+            return setSelect(null)
+        }
+
+        setSelect(i)
+    }
     // Rendering conditional for the choosing button
     function Element({ page }) {
         if (pagesInfo.current_page === page ) {
           return <div>
-                    <div className="upper">
+                    <div className="upper" onClick={() => toggle(page)}>
                         {page}
-                        <span>+</span>
+                        <span>{select!=page ? '-' : '+'}</span>
                     </div>
-                    <div id="vertical-menu">
+                    <div className={select!=page ? "vertical-menu":"vertical-menu-show"}>
                         {allPageNumber}
                     </div>
                  </div>
         }
-        return <div>{page}</div>;
+        return <a>{page}</a>;
     }
 
     return (
@@ -101,12 +109,12 @@ const AdvocatesList = () => {
 
             {/* Pages number button section */}
             <ul className="pages-number">
-                <li key="first" className={pagesInfo.current_page === 1 ? "work": null}>
+                <div key="first" className={pagesInfo.current_page === 1 ? "work": null}>
                     <button onClick={goToFirstPage}>First</button>
-                </li>
-                <li key="prev"className={pagesInfo.current_page === 1 ? "work": null}>
+                </div>
+                <div key="prev"className={pagesInfo.current_page === 1 ? "work": null}>
                     <button onClick={goToPrevPage}>Prev</button>
-                </li>
+                </div>
                 {pages.map((page, i) =>(
                     <div>
                         <li key={i} 
@@ -119,12 +127,12 @@ const AdvocatesList = () => {
 
                     </div>
                 ))}
-                <li key="next" className={pagesInfo.current_page === pagesInfo.total_pages ? "work": null}>
+                <div key="next" className={pagesInfo.current_page === pagesInfo.total_pages ? "work": null}>
                     <button onClick={goToNextPage}>Next</button>
-                </li>
-                <li key="last" className={pagesInfo.current_page === pagesInfo.total_pages ? "work": null}>
+                </div>
+                <div key="last" className={pagesInfo.current_page === pagesInfo.total_pages ? "work": null}>
                     <button onClick={goToLastPage}>Last</button>
-                </li>
+                </div>
             </ul>
             
             <h3>{pagesInfo.current_page}</h3>

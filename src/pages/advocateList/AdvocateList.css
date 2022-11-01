@@ -36,10 +36,18 @@
     color: white;
 }
 
-#vertical-menu {
+.vertical-menu {
+    width: 80px;
+    max-height: 0;
+    overflow-y: hidden;
+    transition: all 0.5s;
+}
+
+.vertical-menu-show {
     width: 80px;
     height: 150px;
     overflow-y: auto;
+    transition: all 0.5s;
 }
 
 .pages-number li.work {
