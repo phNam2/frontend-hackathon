@@ -13,16 +13,12 @@
     background-color: rgb(222, 202, 176);
 }
 
-.pages-number li div {
-    display: none;
-}
-
 .pages-number li.active {
     color: white;
     background-color: black;
 }
 
-.pages-number li.active div {
+.pages-number li.active  div {
     background-color: aqua;
     color: black;
     display: block;
@@ -30,6 +26,18 @@
 
 .pages-number li.active div:hover {
     background-color: rgb(59, 138, 138);
+}
+
+.pages-number li.active div.upper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#vertical-menu {
+    width: 80px;
+    height: 150px;
+    overflow-y: auto;
 }
 
 .pages-number li.work {

@@ -66,6 +66,7 @@ const AdvocatesList = () => {
         }
     }
 
+    // Return all the page number in the collapsible button
     const allPageNumber = [];
     for (let i=1; i<= pagesInfo.total_pages; i++) {
         allPageNumber.push(<div key={"drop"+i} 
@@ -74,6 +75,23 @@ const AdvocatesList = () => {
                             >
                                 {i}
                             </div>);
+    }
+
+
+    // Rendering conditional for the choosing button
+    function Element({ page }) {
+        if (pagesInfo.current_page === page ) {
+          return <div>
+                    <div className="upper">
+                        {page}
+                        <span>+</span>
+                    </div>
+                    <div id="vertical-menu">
+                        {allPageNumber}
+                    </div>
+                 </div>
+        }
+        return <div>{page}</div>;
     }
 
     return (
@@ -96,9 +114,7 @@ const AdvocatesList = () => {
                             className={pagesInfo.current_page === page ? "active": null}
                             onClick={goToPage}
                         >
-                            {page}
-                            {allPageNumber}
-                            
+                            <Element page={page}/>
                         </li>
 
                     </div>
