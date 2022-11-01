@@ -99,7 +99,7 @@ const AdvocatesList = () => {
                     </div>
                  </div>
         }
-        return <a>{page}</a>;
+        return null;
     }
 
     return (
@@ -122,6 +122,7 @@ const AdvocatesList = () => {
                             className={pagesInfo.current_page === page ? "active": null}
                             onClick={goToPage}
                         >
+                            {page}
                             <Element page={page}/>
                         </li>
 
