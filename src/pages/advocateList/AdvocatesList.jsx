@@ -89,7 +89,11 @@ const AdvocatesList = () => {
     // Rendering conditional for the choosing button
     function Element({ page }) {
         if (pagesInfo.current_page === page ) {
-          return <div>
+          return <li key={page} 
+                     id={page} 
+                     className={pagesInfo.current_page === page ? "active": null}
+                     onClick={goToPage}
+                 >
                     <div className="upper" onClick={() => toggle(page)}>
                         {page}
                         <span>{select!=page ? '-' : '+'}</span>
@@ -97,9 +101,15 @@ const AdvocatesList = () => {
                     <div className={select!=page ? "vertical-menu":"vertical-menu-show"}>
                         {allPageNumber}
                     </div>
-                 </div>
+                 </li>
         }
-        return null;
+        return <li key={page} 
+                   id={page} 
+                   className={pagesInfo.current_page === page ? "active": null}
+                   onClick={goToPage}
+                >
+                    {page}
+                </li>;
     }
 
     return (
@@ -117,15 +127,7 @@ const AdvocatesList = () => {
                 </div>
                 {pages.map((page, i) =>(
                     <div>
-                        <li key={i} 
-                            id={page} 
-                            className={pagesInfo.current_page === page ? "active": null}
-                            onClick={goToPage}
-                        >
-                            {page}
-                            <Element page={page}/>
-                        </li>
-
+                        <Element page={page}/>
                     </div>
                 ))}
                 <div key="next" className={pagesInfo.current_page === pagesInfo.total_pages ? "work": null}>
