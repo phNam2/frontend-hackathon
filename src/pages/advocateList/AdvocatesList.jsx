@@ -89,7 +89,7 @@ const AdvocatesList = () => {
     // Rendering conditional for the choosing button
     function Element({ page }) {
         if (pagesInfo.current_page === page ) {
-          return <li key={page} 
+          return <li  
                      id={page} 
                      className={pagesInfo.current_page === page ? "active": null}
                      onClick={goToPage}
@@ -103,9 +103,9 @@ const AdvocatesList = () => {
                     </div>
                  </li>
         }
-        return <li key={page} 
-                   id={page} 
-                   className={pagesInfo.current_page === page ? "active": null}
+        return <li 
+                   id={page}
+                   className="non-active"
                    onClick={goToPage}
                 >
                     {page}
@@ -127,7 +127,7 @@ const AdvocatesList = () => {
                 </div>
                 {pages.map((page, i) =>(
                     <div>
-                        <Element page={page}/>
+                        <Element key={page} page={page}/>
                     </div>
                 ))}
                 <div key="next" className={pagesInfo.current_page === pagesInfo.total_pages ? "work": null}>
