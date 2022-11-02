@@ -8,7 +8,10 @@ const ListItem = ({advocates}) => {
       <h2>Advocates list:</h2>
       <div className="advocates-list">
         {advocates.map((advocate, i) =>(
-          <h3 key={i}>{advocate.name}</h3>
+          <div>
+            <a href={'/advocates/'+advocate.username} key={i}>{advocate.name}</a>
+          </div>
+          
         ))}
       </div>
     </div>
