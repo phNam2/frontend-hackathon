@@ -9,7 +9,7 @@ import './App.css';
 import './index.css';
 import { NavBar } from './components';
 import { Header, Footer } from './containers';
-import { AdvocateList } from './pages';
+import { AdvocateList, AdvocateDetails } from './pages';
 
 const App = () => {
   return (
@@ -21,7 +21,7 @@ const App = () => {
         </div>
         <Routes>
           <Route path="/advocates" element={<AdvocateList /> } />
-          {/* <Route path="advocates/:id" element={<RiderPage />}/> */}
+          <Route path="advocates/:id" element={<RiderPage />}/>
         </Routes>
         <div>
           <Footer/>
