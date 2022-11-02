@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import {useLocation} from "react-router-dom";
-import { ListItem } from '../../components';
+import { Helmet } from 'react-helmet'
+import {useLocation} from "react-router-dom"
+import { ListItem } from '../../components'
 import './AdvocateList.css'
 
 const AdvocatesList = () => {
@@ -115,6 +116,10 @@ const AdvocatesList = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Advocates List</title>
+            </Helmet>
+            
             {/* Advocate information */}
             <ListItem advocates={advocates} />
 
