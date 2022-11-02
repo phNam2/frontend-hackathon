@@ -79,6 +79,7 @@ const AdvocatesList = () => {
     }
 
 
+    // Toggle between the pagination button
     const toggle = (i) => {
         if (select === i) {
             return setSelect(null)
