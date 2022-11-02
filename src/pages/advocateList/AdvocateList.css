@@ -52,6 +52,6 @@
     position:absolute;
 }
 
-.pages-number li.work {
+.pages-number div.work {
     visibility: hidden;
 }
