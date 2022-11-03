@@ -25,9 +25,17 @@
 .navbar-links_container {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
-.navbar-links_container p{
+.navbar-links_api {
+    display: flex;
+    align-items: flex-end;
+    color: rgb(26, 177, 211);
+}
+
+.navbar-links_container p,
+.navbar-links_api {
     font-family: var(--font-family);
     /* font-weight: 500; */
     font-size: 18px;
@@ -35,5 +43,4 @@
     text-transform: capitalize;
     margin: 1rem 2rem;
     cursor: pointer;
-    /* border-style: none solid; */
 }

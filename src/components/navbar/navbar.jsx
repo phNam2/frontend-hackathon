@@ -15,6 +15,13 @@ const Navbar = () => {
           <p><a href="/follow">Follow</a></p>
         </div>
       </div>
+      
+      <div className="navbar-links_api">
+          <p><a href="https://cados.up.railway.app" target="_blank" rel="noopener noreferrer">
+                Get User Data
+              </a>
+          </p>
+        </div>
     </div>
   )
 }
