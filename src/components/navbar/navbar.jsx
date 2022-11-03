@@ -10,6 +10,10 @@ const Navbar = () => {
         <div className="navbar-links_logo">
           <img src={logo} alt="logo" />
         </div>
+        <div className="navbar-links_container">
+          <p><a href="/advocates">Advocate List</a></p>
+          <p><a href="/follow">Follow</a></p>
+        </div>
       </div>
     </div>
   )

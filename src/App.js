@@ -15,9 +15,8 @@ const App = () => {
   return (
     <Router>
       <div className="App">
-        <div className="gradient__bg ">
+        <div className="bg ">
           <NavBar/>
-          <Header/>
         </div>
         <Routes>
           <Route path="/follow" element={<FollowList /> } />
