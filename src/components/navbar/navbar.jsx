@@ -1,11 +1,16 @@
 import React from 'react'
 import './navbar.css'
 import {GrMenu, GrClose} from 'react-icons/gr'
+import logo from '../../assets/logo.png'
 
 const Navbar = () => {
   return (
-    <div>
-      Navbar 2
+    <div className='navbar'>
+      <div className="navbar-links">
+        <div className="navbar-links_logo">
+          <img src={logo} alt="logo" />
+        </div>
+      </div>
     </div>
   )
 }
