@@ -98,9 +98,9 @@ const AdvocatesList = () => {
                  >
                     <div className="upper" onClick={() => toggle(page)}>
                         {page}
-                        <span>{select!=page ? '-' : '+'}</span>
+                        <span>{select!==page ? '-' : '+'}</span>
                     </div>
-                    <div className={select!=page ? "vertical-menu":"vertical-menu-show"}>
+                    <div className={select!==page ? "vertical-menu":"vertical-menu-show"}>
                         {allPageNumber}
                     </div>
                  </li>
