@@ -54,7 +54,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    border-radius: 0 0 20px 20px;
+    border-radius: 0 0 10px 10px;
     visibility: hidden;
     transition: 0.1s;
     transition-property: bottom;
