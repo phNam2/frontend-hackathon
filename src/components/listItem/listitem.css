@@ -18,12 +18,18 @@
     position: relative;
     border-radius: 20px;
     transition: 0.3s;
+    border-style: double;
+    border-width: 7px;
     /* box-shadow: 10px 10px 20px rgba(114, 109, 109, 0.1); */
     /* height: 300px; */
 }
 
+.details a {
+    color: rgb(25, 130, 210);
+}
+
 .details a:hover {
-    color: rgb(5, 104, 181);
+    color: rgb(216, 25, 213);
 }
 
 .details img{
