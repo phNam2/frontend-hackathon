@@ -80,8 +80,8 @@
     position:absolute;
 }
 
-.pages-number div.work {
-    visibility: hidden;
+.pages-number div.non-work {
+    display: none;
 }
 
 

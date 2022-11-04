@@ -140,10 +140,10 @@ const AdvocatesList = () => {
 
             {/* Pages number button section */}
             <ul className="pages-number">
-                <div key="first" className={pagesInfo.current_page === 1 ? "work": null}>
+                <div key="first" className={pagesInfo.current_page === 1 ? "non-work": null}>
                     <button onClick={goToFirstPage}>First</button>
                 </div>
-                <div key="prev"className={pagesInfo.current_page === 1 ? "work": null}>
+                <div key="prev"className={pagesInfo.current_page === 1 ? "non-work": null}>
                     <button onClick={goToPrevPage}>Prev</button>
                 </div>
                 {pages.map((page, i) =>(
@@ -151,10 +151,10 @@ const AdvocatesList = () => {
                         <Element key={page} page={page}/>
                     </div>
                 ))}
-                <div key="next" className={pagesInfo.current_page === pagesInfo.total_pages ? "work": null}>
+                <div key="next" className={pagesInfo.current_page === pagesInfo.total_pages ? "non-work": null}>
                     <button onClick={goToNextPage}>Next</button>
                 </div>
-                <div key="last" className={pagesInfo.current_page === pagesInfo.total_pages ? "work": null}>
+                <div key="last" className={pagesInfo.current_page === pagesInfo.total_pages ? "non-work": null}>
                     <button onClick={goToLastPage}>Last</button>
                 </div>
             </ul>
