@@ -108,8 +108,9 @@ const AdvocatesList = () => {
           return <li  
                      id={page} 
                      className={pagesInfo.current_page === page ? "active": null}
+                     onClick={() => toggle(page)}
                  >
-                    <div className="upper" onClick={() => toggle(page)}>
+                    <div className="upper">
                         {page}
                         <span>{select!==page ? '-' : '+'}</span>
                     </div>
