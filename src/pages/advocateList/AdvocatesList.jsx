@@ -108,7 +108,6 @@ const AdvocatesList = () => {
           return <li  
                      id={page} 
                      className={pagesInfo.current_page === page ? "active": null}
-                     onClick={goToPage}
                  >
                     <div className="upper" onClick={() => toggle(page)}>
                         {page}
