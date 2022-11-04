@@ -8,6 +8,7 @@ import React from 'react';
 import './App.css';
 import './index.css';
 import { NavBar } from './components';
+import { Footer } from './containers'
 import { AdvocateList, AdvocateDetails, FollowList } from './pages';
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="/advocates" element={<AdvocateList /> } />
           <Route path="/advocates/:username" element={<AdvocateDetails />}/>
         </Routes>
+        <Footer />
       </div>
     </Router>
   )
