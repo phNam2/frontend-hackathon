@@ -9,6 +9,7 @@ const AdvocatesList = () => {
     let [advocates, setAdvocates] = useState([])
     let [pages, setPagesNumber] = useState([])
     let [pagesInfo, setPagesInfo] = useState([])
+    let [searchTotal, setSearchTotal] = useState([])
     let [select, setSelect] = useState([null])
 
     // Search the page location in the URL
@@ -29,6 +30,7 @@ const AdvocatesList = () => {
         setAdvocates(data.advocates) // Get the advocates information from API
         setPagesInfo(data.pagination)
         setPagesNumber(data.pagination.pages) // Get the current pagination information from API
+        setSearchTotal(data.total)
         window.history.replaceState(null, "", "/advocates/?page=" + current_page) // Fix the URL for history search
     }
 
@@ -121,6 +123,7 @@ const AdvocatesList = () => {
             </Helmet>
             
             {/* Advocate information */}
+            <h2>There are {searchTotal} Advocates shown here</h2>
             <ListItem advocates={advocates} />
 
             {/* Pages number button section */}

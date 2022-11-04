@@ -5,7 +5,6 @@ const ListItem = ({advocates}) => {
 
   return (
     <div>
-      <h2>Advocates list:</h2>
       <div className="advocates-list">
         {advocates.map((advocate, i) =>(
           <div>
