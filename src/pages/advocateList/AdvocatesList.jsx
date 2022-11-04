@@ -158,9 +158,6 @@ const AdvocatesList = () => {
                     <button onClick={goToLastPage}>Last</button>
                 </div>
             </ul>
-            
-            <h3>{pagesInfo.current_page}</h3>
-            
         </div>      
     )
 }
