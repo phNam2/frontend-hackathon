@@ -18,7 +18,7 @@ const ListItem = ({advocates}) => {
             <img src={advocate.profile_pic} />
             <a href={advocate.twitter}>{'@'+advocate.username}</a>
             <div className="details-more">
-              <h1>{advocate.name}</h1>
+              <h2>{advocate.name}</h2>
               <p>{advocate.bio}</p>
             </div>
             <div className="details-buttons">
