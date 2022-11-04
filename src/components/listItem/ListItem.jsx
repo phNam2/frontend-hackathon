@@ -1,5 +1,6 @@
 import React from 'react'
 import {useNavigate} from 'react-router-dom';
+import './listitem.css'
 
 const ListItem = ({advocates}) => {
   
@@ -12,7 +13,7 @@ const ListItem = ({advocates}) => {
     <div className='"advocates_list"'>
       <div className="advocates_list-container">
         {advocates.map((advocate, i) =>(
-          <div class="details" onClick={() => goToAdvocatePage(advocate.username)}>
+          <div className="details" onClick={() => goToAdvocatePage(advocate.username)}>
             <img src={advocate.profile_pic} />
             <a href={'@'+advocate.twitter} key={i}>{advocate.username}</a>
             {/* <a href={'/advocates/'+advocate.username} key={i}>{advocate.name}</a> */}
