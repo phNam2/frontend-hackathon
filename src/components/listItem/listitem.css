@@ -14,11 +14,25 @@
     flex-direction: column;
     margin: 2rem;
     padding: 1rem;
-    width: 300px;
+    width: 200px;
+    border-radius: 20px;
     /* height: 300px; */
 }
 
 .details img{
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.details-more {
+    display: none;
+}
+
+.details:hover {
+    width: 300px;
+}
+
+.details:hover .details-more{
+    display: block;
 }
