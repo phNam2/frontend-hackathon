@@ -6,7 +6,6 @@
 }
 
 .details {
-    cursor: pointer;
     background: var(--gradient-card);
     display: flex;
     align-items: center;
@@ -19,6 +18,10 @@
     transition: 0.3s;
     /* box-shadow: 10px 10px 20px rgba(114, 109, 109, 0.1); */
     /* height: 300px; */
+}
+
+.details a:hover {
+    color: rgb(4, 109, 190);
 }
 
 .details img{
