@@ -53,6 +53,10 @@
     cursor: pointer;
 }
 
+.pages-number button:hover {
+    background-color: #5f5858;
+}
+
 
 @media screen and (max-width: 750px) {
     .non-active {
