@@ -1,6 +1,6 @@
 import React from 'react'
 import {useNavigate} from 'react-router-dom';
-import {RiUserFollowFill} from 'react-icons/ri'
+import {RiUserFollowLine, RiUserUnfollowFill} from 'react-icons/ri'
 import './listitem.css'
 
 const ListItem = ({advocates}) => {
@@ -22,7 +22,7 @@ const ListItem = ({advocates}) => {
               <p>{advocate.bio}</p>
             </div>
             <div className="details-buttons">
-              <RiUserFollowFill size={27} onClick={null} />
+              <RiUserFollowLine alt="Follow" size={27} onClick={null} />
               <button onClick={() => goToAdvocatePage(advocate.username)}>Details</button>
             </div>
 
