@@ -41,7 +41,7 @@
 .details-buttons {
     /* margin: 0 0 0 1rem ; */
     position: absolute;
-    bottom: 0px;
+    bottom: -60px;
     background: rgba(225, 228, 205, 0.8);
     width: 100%;
     display: flex;
@@ -50,12 +50,27 @@
     padding: 15px;
     border-radius: 0 0 20px 20px;
     visibility: hidden;
+    transition: 0.1s;
+    transition-property: bottom;
 }
 
 .details-buttons svg {
     cursor: pointer;
 }
 
+.details-buttons button {
+    background-color: #c40f0f; 
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 20%;
+    cursor: pointer;
+}
+
 .details:hover .details-buttons{
     visibility:visible;
+    bottom: 0px;
 }
