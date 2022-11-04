@@ -115,7 +115,7 @@ const AdvocatesList = () => {
     }
 
     return (
-        <div>
+        <div className='bg_gradient'>
             <Helmet>
                 <title>Advocates List</title>
             </Helmet>
