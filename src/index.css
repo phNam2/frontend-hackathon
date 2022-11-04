@@ -3,6 +3,8 @@
 :root {
     --font-family: 'Playfair Display', sans-serif;
 
+    --gradient-card: linear-gradient(341deg, rgba(255, 255, 0, 1) 0%, rgba(251, 247, 142, 1) 74%);
+
     --color-bg: #171718;
     --color-card: #ede628;
     --color-text: #81AFDD;

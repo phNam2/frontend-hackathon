@@ -16,7 +16,6 @@ const ListItem = ({advocates}) => {
           <div className="details" onClick={() => goToAdvocatePage(advocate.username)}>
             <img src={advocate.profile_pic} />
             <p>{'@'+advocate.username}</p>
-            {/* <a href={'/advocates/'+advocate.username} key={i}>{advocate.name}</a> */}
             <div className="details-more">
               <h1>{advocate.name}</h1>
               <p>{advocate.bio}</p>
