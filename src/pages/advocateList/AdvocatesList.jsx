@@ -34,32 +34,43 @@ const AdvocatesList = () => {
         window.history.replaceState(null, "", "/advocates/?page=" + current_page) // Fix the URL for history search
     }
 
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+
     // The button lead to the API page after clicked
     const goToPage = (event) => {
         getAdvocates(Number(event.target.id))
+        topFunction()
         // console.log(event.target.id)
     }
 
     const goToPage2 = (event) => {
         let arr = event.target.id.split(" ");
         getAdvocates(Number(arr[1]))
+        topFunction()
         // console.log(arr[1])
     }
 
     // The function go to the first page
     const goToFirstPage = () => {
         getAdvocates(1)
+        topFunction()
     }
 
     // The function go to the last page
     const goToLastPage = () => {
         getAdvocates(pagesInfo.total_pages)
+        topFunction()
     }
 
     // The function go to the previous page
     const goToPrevPage = () => {
         if (pagesInfo.has_previous) {
             getAdvocates(pagesInfo.current_page-1)
+            topFunction()
         }
     }
 
@@ -67,6 +78,7 @@ const AdvocatesList = () => {
     const goToNextPage = () => {
         if (pagesInfo.has_next) {
             getAdvocates(pagesInfo.current_page+1)
+            topFunction()
         }
     }
 
