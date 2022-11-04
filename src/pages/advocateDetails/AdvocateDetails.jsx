@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import {useLocation} from "react-router-dom"
 import { Helmet } from 'react-helmet'
+import './advocateDetails.css'
 
 const AdvocateDetails = () => {
 
@@ -26,7 +27,7 @@ const AdvocateDetails = () => {
       <Helmet>
         <title>{advocate.name}</title>
       </Helmet>
-      <h1>{advocate.name}</h1>
+      <h1 className='name_details'>{advocate.name}</h1>
     </div>
     
   )
