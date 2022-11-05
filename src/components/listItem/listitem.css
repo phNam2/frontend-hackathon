@@ -94,6 +94,10 @@
     cursor: pointer;
 }
 
+.details-buttons button:hover {
+    background-color: #e84e4e; 
+}
+
 .details:hover .details-buttons{
     visibility:visible;
     bottom: 0px;

@@ -6,8 +6,16 @@ import './listitem.css'
 const ListItem = ({advocates}) => {
   
   const navigate = useNavigate();
+
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
+
   const goToAdvocatePage = (username) => {
     navigate('/advocates/'+username );
+    topFunction();
 }
 
   return (
