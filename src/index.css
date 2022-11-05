@@ -7,6 +7,23 @@
 
     --color-bg: #171718;
     --color-card: #ede628;
-    --color-text: #81AFDD;
-    --color-subtext: #FF8A71;
+}
+
+::-webkit-scrollbar {
+    width: 1em;
+}
+
+::-webkit-scrollbar-track {
+    background: #434343;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #161616;
+    border-radius: 100vw;
+    border: .25em solid #161616;
+    margin-block: .5em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #212121;
 }
