@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom"
 import { Helmet } from 'react-helmet'
 import {TbArrowBackUp} from 'react-icons/tb'
 import {RiUserFollowLine, RiUserUnfollowFill} from 'react-icons/ri'
+import { motion } from 'framer-motion'
 import './advocateDetails.css'
 
 const AdvocateDetails = () => {
@@ -25,7 +26,11 @@ const AdvocateDetails = () => {
 
   return (
 
-    <div>
+    <motion.div initial={{ x: "100%" }} 
+                animate={{ x: "0%" }}
+                exit={{ opacity: 1}}
+                transition={{duration: 0.75, ease: "easeOut"}}
+    >
       <Helmet>
         <title>{advocate.name}</title>
       </Helmet>
@@ -67,7 +72,7 @@ const AdvocateDetails = () => {
           </div>
           <div class="detailsPage-container-companies">Companies (for later api)</div>
         </div>
-    </div>
+    </motion.div>
     
   )
 }

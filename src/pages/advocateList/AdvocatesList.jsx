@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Helmet } from 'react-helmet'
 import {useLocation} from "react-router-dom"
 import { ListItem } from '../../components'
+import { motion } from 'framer-motion'
 import './AdvocateList.css'
 
 const AdvocatesList = () => {
@@ -129,7 +130,12 @@ const AdvocatesList = () => {
     }
 
     return (
-        <div className='bg_gradient'>
+        <motion.div className='bg_gradient' 
+                    initial={{ x: "-100%" }} 
+                    animate={{ x: "0%" }}
+                    exit={{ opacity: 1}}
+                    transition={{duration: 1, ease: "easeOut"}}
+        >
             <Helmet>
                 <title>Advocates List</title>
             </Helmet>
@@ -158,7 +164,7 @@ const AdvocatesList = () => {
                     <button onClick={goToLastPage}>Last</button>
                 </div>
             </ul>
-        </div>      
+        </motion.div>      
     )
 }
 
