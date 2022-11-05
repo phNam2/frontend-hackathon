@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/frontend-hackathon/static/css/main.edd2792c.css",
+    "main.js": "/frontend-hackathon/static/js/main.bac22ba8.js",
+    "index.html": "/frontend-hackathon/index.html",
+    "main.edd2792c.css.map": "/frontend-hackathon/static/css/main.edd2792c.css.map",
+    "main.bac22ba8.js.map": "/frontend-hackathon/static/js/main.bac22ba8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.edd2792c.css",
+    "static/js/main.bac22ba8.js"
+  ]
+}
