@@ -34,9 +34,29 @@ const AdvocateDetails = () => {
       </div>
       <div className="detailsPage"></div>
         <div className="detailsPage-container">
-          <div class="detailsPage-container-picture">1</div>
-          <div class="detailsPage-container-description">2</div>
-          <div class="detailsPage-container-companies">3</div>
+          <div className="detailsPage-container-picture">
+            <img src={advocate.profile_pic} />
+          </div>
+          <div className="detailsPage-container-description">
+            <p className='detailsPage-container-description-info'>Name: 
+              <p>{advocate.name}</p>
+            </p>
+            <p className='detailsPage-container-description-info'>User name: 
+              <p>{advocate.username}</p>
+            </p>
+            <p >Twitter link: 
+              <a href={advocate.twitter}
+                 className={advocate.twitter !== null ? "detailsPage-container-description-twitter": null}
+                target="_blank" rel="noopener noreferrer"
+              >
+                {' ' + advocate.twitter }
+              </a>
+            </p>
+            <p className='detailsPage-container-description-info'> Biography: 
+              <p>{advocate.bio}</p>
+            </p>
+          </div>
+          <div class="detailsPage-container-companies">Companies (for later api)</div>
         </div>
     </div>
     
