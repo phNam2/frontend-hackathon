@@ -22,7 +22,10 @@ const ListItem = ({advocates}) => {
               <p>{advocate.bio}</p>
             </div>
             <div className="details-buttons">
-              <RiUserFollowLine alt="Follow" size={27} onClick={null} />
+              <div className="details-buttons-follows">
+                <RiUserFollowLine alt="Follow" size={27} onClick={null} />
+              </div>
+              
               <button onClick={() => goToAdvocatePage(advocate.username)}>Details</button>
             </div>
 
