@@ -1,13 +1,16 @@
-.name_details {
-    color: aqua;
-}
-
 .return {
     background-color: rgb(56, 55, 55);
     padding: 0.5rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .return svg {
     color: white;
     cursor: pointer;
+}
+
+.name_details {
+    color: aqua;
+    padding: 0px 0px 0px 20px;
 }

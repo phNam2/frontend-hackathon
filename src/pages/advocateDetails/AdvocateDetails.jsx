@@ -30,8 +30,8 @@ const AdvocateDetails = () => {
       </Helmet>
       <div className="return">
         <TbArrowBackUp alt="Follow" size={40} onClick={() => navigate(-1)} />
+        <h2 className='name_details'>{advocate.name}</h2>
       </div>
-      <h1 className='name_details'>{advocate.name}</h1>
     </div>
     
   )
