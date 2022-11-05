@@ -16,7 +16,10 @@ const ListItem = ({advocates}) => {
         {advocates.map((advocate, i) =>(
           <div className="details">
             <img src={advocate.profile_pic} />
-            <a href={advocate.twitter}>{'@'+advocate.username}</a>
+            <a href={advocate.twitter}
+              className={advocate.twitter !== null ? "details-twitter": null}>
+              {'@'+advocate.username}
+            </a>
             <div className="details-more">
               <h2>{advocate.name}</h2>
               <p>{advocate.bio}</p>

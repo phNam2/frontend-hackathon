@@ -24,11 +24,11 @@
     /* height: 300px; */
 }
 
-.details a {
+.details .details-twitter {
     color: rgb(25, 130, 210);
 }
 
-.details a:hover {
+.details .details-twitter:hover {
     color: rgb(216, 25, 213);
 }
 
