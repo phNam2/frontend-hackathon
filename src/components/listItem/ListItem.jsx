@@ -17,7 +17,9 @@ const ListItem = ({advocates}) => {
           <div className="details">
             <img src={advocate.profile_pic} />
             <a href={advocate.twitter}
-              className={advocate.twitter !== null ? "details-twitter": null}>
+               className={advocate.twitter !== null ? "details-twitter": null}
+               target="_blank" rel="noopener noreferrer"
+            >
               {'@'+advocate.username}
             </a>
             <div className="details-more">
