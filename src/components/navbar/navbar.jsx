@@ -14,8 +14,8 @@ const Navbar = () => {
           <img src={logo} alt="logo" />
         </div>
         <div className="navbar-links_container">
-          <p><a href="/advocates">Advocate List</a></p>
-          <p><a href="/follow">Follow List</a></p>
+          <p><a href={"/advocates"}>Advocate List</a></p>
+          <p><a href={"/follow"}>Follow List</a></p>
         </div>
       </div>
       <div className="navbar-links_api">
