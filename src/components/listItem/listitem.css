@@ -89,3 +89,20 @@
     visibility:visible;
     bottom: 0px;
 }
+
+@media screen and (max-width: 400px) {
+    .details {
+        width: 250px;
+        /* box-shadow: 10px 10px 20px rgba(114, 109, 109, 0.1); */
+        /* height: 300px; */
+    }
+
+    .details:hover {
+        transform: scale(1.2);
+        z-index: 2;
+    }
+
+    .details-more p {
+        font-size: 14px;
+    }
+}
