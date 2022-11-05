@@ -32,6 +32,12 @@ const AdvocateDetails = () => {
         <TbArrowBackUp alt="Follow" size={40} onClick={() => navigate(-1)} />
         <h2 className='name_details'>{advocate.name}</h2>
       </div>
+      <div className="detailsPage"></div>
+        <div className="detailsPage-container">
+          <div class="detailsPage-container-picture">1</div>
+          <div class="detailsPage-container-description">2</div>
+          <div class="detailsPage-container-companies">3</div>
+        </div>
     </div>
     
   )
