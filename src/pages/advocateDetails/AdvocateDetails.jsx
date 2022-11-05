@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useLocation, useNavigate } from "react-router-dom"
 import { Helmet } from 'react-helmet'
 import {TbArrowBackUp} from 'react-icons/tb'
+import {RiUserFollowLine, RiUserUnfollowFill} from 'react-icons/ri'
 import './advocateDetails.css'
 
 const AdvocateDetails = () => {
@@ -53,8 +54,16 @@ const AdvocateDetails = () => {
               </a>
             </p>
             <p className='detailsPage-container-description-info'> Biography: 
-              <p>{advocate.bio}</p>
+              <p>{' ' + advocate.bio}</p>
             </p>
+
+            <p className='detailsPage-container-description-info'> Click to Follow:  
+              {' '} <RiUserFollowLine alt="Follow" size={40} onClick={null} />
+            </p>
+
+            {/* <div className="detailsPage-container-button">
+              <RiUserFollowLine alt="Follow" size={30} onClick={null} />
+            </div> */}
           </div>
           <div class="detailsPage-container-companies">Companies (for later api)</div>
         </div>
