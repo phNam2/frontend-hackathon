@@ -80,6 +80,7 @@
     margin-top: 1rem;
     min-width: 210px;
     border-radius: 5px;
+    z-index: 1;
 }
 
 .navbar-menu_container li,
