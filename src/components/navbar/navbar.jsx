@@ -17,8 +17,6 @@ const Navbar = () => {
           <img src={logo} alt="logo" />
         </div>
         <div className="navbar-links_container">
-          {/* <p><a href={"/advocates"}>Advocate List</a></p>
-          <p><a href={"/follow"}>Follow List</a></p> */}
           <Link to={"/advocates"}> 
             <li>Advocate List</li> 
           </Link>
@@ -41,13 +39,16 @@ const Navbar = () => {
         {toggleMenu && (
           <div className='navbar-menu_container scale-up-center'>
             <div className='navbar-menu_container-link'>
-              <Link to={"/advocates"}> 
-                <li>Advocate List</li> 
+              <Link to={"/advocates" }> 
+                <li onClick={() => setToggleMenu(false)}>Advocate List</li> 
               </Link>
               <Link to={"/follow"}>
-                <li>Follow List</li> 
+                <li onClick={() => setToggleMenu(false)}>Follow List</li> 
               </Link>
-              <p><a href="https://cados.up.railway.app" target="_blank" rel="noopener noreferrer" id='api_link'>
+              <p><a href="https://cados.up.railway.app" 
+                    target="_blank" rel="noopener noreferrer" 
+                    id='api_link'
+                    onClick={() => setToggleMenu(false)}>
                 Get Users Data
               </a>
           </p>
