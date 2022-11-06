@@ -1,3 +1,6 @@
+import {
+  Link
+} from "react-router-dom";
 import React, {useState} from 'react'
 import './navbar.css'
 import {GrMenu, GrClose} from 'react-icons/gr'
@@ -14,8 +17,14 @@ const Navbar = () => {
           <img src={logo} alt="logo" />
         </div>
         <div className="navbar-links_container">
-          <p><a href={"/advocates"}>Advocate List</a></p>
-          <p><a href={"/follow"}>Follow List</a></p>
+          {/* <p><a href={"/advocates"}>Advocate List</a></p>
+          <p><a href={"/follow"}>Follow List</a></p> */}
+          <Link to={"/advocates"}> 
+            <li>Advocate List</li> 
+          </Link>
+          <Link to={"/follow"}>
+            <li>Follow List</li> 
+          </Link>
         </div>
       </div>
       <div className="navbar-links_api">
@@ -32,8 +41,12 @@ const Navbar = () => {
         {toggleMenu && (
           <div className='navbar-menu_container scale-up-center'>
             <div className='navbar-menu_container-link'>
-              <p><a href="/advocates">Advocate List</a></p>
-              <p><a href="/follow">Follow List</a></p>
+              <Link to={"/advocates"}> 
+                <li>Advocate List</li> 
+              </Link>
+              <Link to={"/follow"}>
+                <li>Follow List</li> 
+              </Link>
               <p><a href="https://cados.up.railway.app" target="_blank" rel="noopener noreferrer" id='api_link'>
                 Get Users Data
               </a>
